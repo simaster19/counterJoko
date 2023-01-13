@@ -4,7 +4,7 @@ namespace App\Http\Resources;
 
 use Illuminate\Http\Resources\Json\JsonResource;
 
-class VoucherResource extends JsonResource
+class AksesorisResource extends JsonResource
 {
     /**
      * Transform the resource into an array.
@@ -17,15 +17,15 @@ class VoucherResource extends JsonResource
         return [
             'id' => $this->id,
             //'id_user' => $this->id_user,
-            'addedBy' => $this->whenLoaded('voucher'),
-            'namaVoucher' => $this->namaVoucher,
+            'addedBy' => $this->whenLoaded('aksesoris'),
+            'namaAksesoris' => $this->namaAksesoris,
+            'jenisAksesoris' => $this->jenisAksesoris,
             'harga' => $this->harga,
             'quantity' => $this->quantity,
             'terjual' => $this->terjual,
             'catatan' => $this->catatan,
             'created_at' => date_format($this->created_at, 'Y-m-d H:i:s'),
             'updated_at' => date_format($this->updated_at, 'Y-m-d H:i:s')
-
         ];
     }
 }

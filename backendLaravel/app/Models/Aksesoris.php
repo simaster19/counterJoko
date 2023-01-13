@@ -7,18 +7,18 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 
-class Voucher extends Model
+class Aksesoris extends Model
 {
     use HasFactory;
 
     protected $guarded = ['id'];
 
     /**
-     * Get the voucher that owns the Voucher
+     * Get the aksesoris that owns the Aksesoris
      *
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */
-    public function voucher(): BelongsTo
+    public function aksesoris(): BelongsTo
     {
         return $this->belongsTo(User::class, 'id_user', 'id');
     }
